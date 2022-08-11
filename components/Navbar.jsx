@@ -6,7 +6,7 @@ import NavMenu from "./NavMenu";
 import HamMenu from '../public/navbar/ham_menu.png'
 
 const Navbar = () => {
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(true)
   return (
     <div className={style.container}>
       <div>
