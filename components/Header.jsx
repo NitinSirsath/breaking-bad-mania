@@ -66,9 +66,9 @@ const Header = () => {
               </Link>
             </li>
           </ul>
-         
+          <button onClick={ctaClickHandler}>Hamburger</button>
         </nav>
-        <div className={style.header__content__toggle}>
+        <div  className={style.header__content__toggle}>
           {!menuOpen ? (
             <BiMenuAltRight onClick={menuToggleHandler} />
           ) : (
