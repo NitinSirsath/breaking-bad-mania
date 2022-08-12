@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
+
 import style from '../styles/home.module.scss'
 
 export default function Home() {

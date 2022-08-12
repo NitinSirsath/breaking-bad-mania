@@ -2,7 +2,7 @@ import React , {useState , useEffect, useCallback} from 'react'
 import {useRouter} from 'next/router'
 import style from  '../../styles/id.module.scss'
 import Image from 'next/image'
-import Background from '../../public/background/walter-jesse-cover.jpg'
+
 
 const CharcterDetails = () => {
     const [character, setCharacter] = useState({})
