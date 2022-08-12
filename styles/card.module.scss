@@ -5,6 +5,7 @@
     display: flex;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 2px, rgba(0, 0, 0, 0.12) 0px -10px 10px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 8px 5px, rgba(0, 0, 0, 0.09) 0px -2px 3px;
     border-radius: 4px;
+    background-color: #9FD0C6;
 
     Image{
         @media screen and (max-width:768px) {
@@ -33,6 +34,7 @@
 .content_wrapper{
     // display: flex;
     padding: 20px;
+    
 }
 
 .card{
@@ -51,11 +53,11 @@
         width: 80%;
         border: none;
         border-radius: 4px;
-        background-color: rgb(93, 126, 204);
+        background-color: #545479;
     }
     
     button:hover{
         
-        background-color: rgb(55, 102, 211);
+        background-color: #363651;
     }
 }

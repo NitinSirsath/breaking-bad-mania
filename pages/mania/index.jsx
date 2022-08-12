@@ -1,8 +1,8 @@
-import React, { useEffect , useState } from "react";
+import React, { useCallback, useEffect , useState } from "react";
 import Card from "../../components/Card";
 import style from '../../styles/mania.module.scss'
 
-const mania = () => {
+const Mania = () => {
 
     // const initialValues = {
     //     img : '',
@@ -22,13 +22,13 @@ const mania = () => {
     loadUser();
   }, []);
   
-  const loadUser = async () => {
+  const loadUser =  async () => {
     const response = await fetch(API_ENDPOINT);
     const data = await response.json();
     setValues(data)
-  };
+  }
 
-  // console.log(values);
+ 
 
   return <div className={style.container}>
     <div className={style.input_field}>
@@ -42,4 +42,4 @@ const mania = () => {
   </div>
 };
 
-export default mania;
+export default Mania;

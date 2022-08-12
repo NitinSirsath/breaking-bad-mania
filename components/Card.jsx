@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Card = ({ character }) => {
-//   console.log(character);
+
   return (
     <div className={style.card}>
       <div className={style.container}>

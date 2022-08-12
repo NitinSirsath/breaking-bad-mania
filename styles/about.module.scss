@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Montserrat:wght@300;400&family=Noto+Sans&family=Roboto+Mono:ital,wght@1,300&display=swap');
+
+.container{
+    height: calc(100vh - 100px);
+    background-image:
+    linear-gradient(to bottom, rgba(144, 145, 148, 0.52), rgba(46, 43, 45, 0.73)),
+    url('../public//background/walter-white.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 600;
+    padding: 100px;
+
+    
+
+    @media screen and (max-width: 768px) {
+       padding: 50px 10px;
+        
+      }
+
+    h1{
+        margin: 0;
+    }
+
+    p{
+        width: 50%;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+          }
+    }
+
+    .github{
+        cursor: pointer;
+    }
+
+    
+
+    @media screen and (max-width: 768px) {
+      background-position-x: center;;
+    }
+}
+

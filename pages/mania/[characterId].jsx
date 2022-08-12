@@ -21,13 +21,13 @@ const CharcterDetails = () => {
         loadUser()
     },[loadUser])
 
-    console.log(character[0]?.name,`${charId} id`);
+    
   return (
     <div className={style.container}>
        
     
      <div className={style.card_container}>
-        
+
             <Image alt={character[0]?.name} height={350} width={300} src={character[0]?.img} />
        
         <div className={style.char_info}>
