@@ -14,7 +14,7 @@ export default function Home() {
     <div className={style.container}>
    <div className={style.heading}>
     <h1>BREAKING BAD MANIA</h1>
-    <p>A high school chemistry teacher diagnosed with inoperable <br /> lung cancer turns to manufacturing and selling <br /> methamphetamine in order to secure his family's future.</p>
+    <p>A high school chemistry teacher diagnosed with inoperable <br /> lung cancer turns to manufacturing and selling <br /> methamphetamine in order to secure his family&apos;s future.</p>
    </div>
     </div>
     </div>

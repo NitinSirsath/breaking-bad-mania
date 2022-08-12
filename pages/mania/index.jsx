@@ -17,11 +17,11 @@ const mania = () => {
     const [values, setValues] = useState([])
 
   const API_ENDPOINT = "https://www.breakingbadapi.com/api/characters";
-
+  
   useEffect(() => {
     loadUser();
   }, []);
-
+  
   const loadUser = async () => {
     const response = await fetch(API_ENDPOINT);
     const data = await response.json();
