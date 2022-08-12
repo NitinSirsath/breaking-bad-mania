@@ -1,0 +1,38 @@
+.input_field {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding: 30px;
+}
+
+.input_field input {
+  border: none;
+  padding: 5px 10px;
+  background-color: transparent;
+  outline: none;
+  border-bottom: 2px solid darkblue;
+  width: 30%;
+  color: darkblue;
+  font-size: medium;
+}
+
+.container {
+  padding: 30px;
+}
+
+.card_container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (2fr)[3];
+      grid-template-columns: repeat(3, 2fr);
+  gap: 20px;
+  padding: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .card_container {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+/*# sourceMappingURL=mania.module.css.map */

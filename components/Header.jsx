@@ -49,6 +49,7 @@ const Header = () => {
             menuOpen && size.width < 768 ? style.isMenu : ""
           }`}
         >
+          <button onClick={ctaClickHandler}>Hamburger</button>
           <ul>
             <li>
               <Link href="/" onClick={menuToggleHandler}>
@@ -66,7 +67,6 @@ const Header = () => {
               </Link>
             </li>
           </ul>
-          <button onClick={ctaClickHandler}>Hamburger</button>
         </nav>
         <div  className={style.header__content__toggle}>
           {!menuOpen ? (

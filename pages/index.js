@@ -17,19 +17,6 @@ export default function Home() {
     <p>A high school chemistry teacher diagnosed with inoperable <br /> lung cancer turns to manufacturing and selling <br /> methamphetamine in order to secure his family's future.</p>
    </div>
     </div>
-     
-      {/* <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer> */}
     </div>
   )
 }

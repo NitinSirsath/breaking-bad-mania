@@ -1,7 +1,7 @@
 import React from "react";
 import style from "../styles/card.module.scss";
 import Image from "next/image";
-import Background from "../public/background/walter-white.jpg";
+
 import Link from "next/link";
 
 const Card = ({ character }) => {

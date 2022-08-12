@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header";
 
-import style from "../styles/layout.module.scss";
+// import style from "./Layout.module.scss";
 
 const Layout = ({ children }) => {
     return (
