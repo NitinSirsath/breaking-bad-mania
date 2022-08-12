@@ -43,7 +43,7 @@ const Header = () => {
   return (
     <header className={style.header}>
       <div className={style.header__content}>
-        <Image src={Main_logo} alt='' height='60' width='100' className={style.header__content__logo} />
+        <Link href='/'><Image src={Main_logo} alt='' height='60' width='100' className={style.header__content__logo} /></Link>
         <nav
           className={`${style.header__content__nav} ${
             menuOpen && size.width < 768 ? style.isMenu : ""

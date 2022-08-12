@@ -1,6 +1,6 @@
 import React, { useEffect , useState } from "react";
-import Card from "../components/Card";
-import style from '../styles/mania.module.scss'
+import Card from "../../components/Card";
+import style from '../../styles/mania.module.scss'
 
 const mania = () => {
 
@@ -28,7 +28,7 @@ const mania = () => {
     setValues(data)
   };
 
-  console.log(values);
+  // console.log(values);
 
   return <div className={style.container}>
     <div className={style.input_field}>
