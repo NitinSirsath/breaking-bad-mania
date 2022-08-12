@@ -1,27 +1,47 @@
-import React , {useState , useEffect} from 'react'
+import React , {useState , useEffect, useCallback} from 'react'
 import {useRouter} from 'next/router'
+import style from  '../../styles/id.module.scss'
+import Image from 'next/image'
+import Background from '../../public/background/walter-jesse-cover.jpg'
 
 const CharcterDetails = () => {
-    const [character, setCharacter] = useState([{}])
+    const [character, setCharacter] = useState({})
     const router = useRouter()
     const charId = router.query.characterId
 
     const API_ENDPOINT = `https://www.breakingbadapi.com/api/characters/${charId}`
-
-    useEffect(() => {
-        loadUser()
-    },[])
-
     
-    const loadUser = async () => {
+    const loadUser = useCallback ( async () => {
         const response = await fetch(API_ENDPOINT)
         const data = await response.json()
         setCharacter(data)
-    }
-    console.log(character,`${charId} id`);
+    },[API_ENDPOINT])
+
+    useEffect(() => {
+        loadUser()
+    },[loadUser])
+
+    console.log(character[0]?.name,`${charId} id`);
   return (
-    <div>CharcterDetails{charId}
-    <h1>{character[0].nickname}</h1>    
+    <div className={style.container}>
+       
+    
+     <div className={style.card_container}>
+        
+            <Image alt={character[0]?.name} height={350} width={300} src={character[0]?.img} />
+       
+        <div className={style.char_info}>
+            <p>Name : {character[0]?.name}</p>
+            <p>Nickname : {character[0]?.nickname}</p>
+            <p>Status : {character[0]?.status}</p>
+            <p>Birthday : {character[0]?.birthday}</p>
+            <p>Portrayed : {character[0]?.portrayed}</p>
+            <p>Appearance(seasons) : {character[0]?.appearance}</p>
+            <p>Occupation : {character[0]?.occupation.map((occu, idx) =>{
+                return <span key={idx}>{occu}{idx === occu.length -1 ? <span>.</span>: <span>,</span>}</span>
+            } )}</p>
+        </div>
+     </div>
     </div>
   )
 }
