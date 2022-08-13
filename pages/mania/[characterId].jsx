@@ -21,7 +21,9 @@ const CharcterDetails = () => {
         loadUser()
     },[loadUser])
 
-    
+
+
+
   return (
     <div className={style.container}>
        
@@ -36,7 +38,7 @@ const CharcterDetails = () => {
             <p>Status : {character[0]?.status}</p>
             <p>Birthday : {character[0]?.birthday}</p>
             <p>Portrayed : {character[0]?.portrayed}</p>
-            <p>Appearance(seasons) : {character[0]?.appearance}</p>
+            <p>Appearance(seasons) : {character[0]?.appearance.toString()}</p>
             <p>Occupation : {character[0]?.occupation.map((occu, idx) =>{
                 return <span key={idx}>{occu}{idx === occu.length -1 ? <span>.</span>: <span>,</span>}</span>
             } )}</p>
