@@ -16,6 +16,7 @@ const Mania = () => {
     
     const [values, setValues] = useState([])
     const [input, setInput] = useState('')
+    const [isLoading, setIsLoading] = useState(true)
 
   const API_ENDPOINT = "https://www.breakingbadapi.com/api/characters";
   
@@ -27,6 +28,7 @@ const Mania = () => {
     const response = await fetch(API_ENDPOINT);
     const data = await response.json();
     setValues(data)
+    setIsLoading(false)
   }
 
   const filterCharacter = values.filter((character) => {
@@ -41,6 +43,7 @@ const Mania = () => {
         <input type="text"  placeholder="search..."  onChange={(e) => setInput(e.target.value)} value={input}/>
        
     </div>
+    {isLoading ? <h1>Loading...</h1> : ''}
     <div className={style.card_container}>
         {filterCharacter.map((character) => {
             return <Card character={character}  key={character.char_id}/>

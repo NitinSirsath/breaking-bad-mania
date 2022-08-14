@@ -6,6 +6,7 @@ import Image from 'next/image'
 
 const CharcterDetails = () => {
     const [character, setCharacter] = useState({})
+    const [isLoading, setIsLoading] = useState(true)
     const router = useRouter()
     const charId = router.query.characterId
 
@@ -15,6 +16,7 @@ const CharcterDetails = () => {
         const response = await fetch(API_ENDPOINT)
         const data = await response.json()
         setCharacter(data)
+        setIsLoading(false)
     },[API_ENDPOINT])
 
     useEffect(() => {
@@ -27,7 +29,8 @@ const CharcterDetails = () => {
   return (
     <div className={style.container}>
        
-    
+       {/* {isLoading ? <h1>Loading...</h1> : ''} */}
+       {isLoading ? <h1>Loading...</h1> :
      <div className={style.card_container}>
 
             <Image alt={character[0]?.name} height={350} width={300} src={character[0]?.img} />
@@ -43,7 +46,7 @@ const CharcterDetails = () => {
                 return <span key={idx}>{occu}{idx === occu.length -1 ? <span>.</span>: <span>,</span>}</span>
             } )}</p>
         </div>
-     </div>
+     </div>}
     </div>
   )
 }
